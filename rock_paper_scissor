@@ -1,0 +1,25 @@
+/* javascript code for console*/
+let getComputerChoice = () => {
+    let ran = Math.floor((Math.random()*3)+1);
+    return ran;
+};
+let random = getComputerChoice();
+let choice = (n) => {
+    if  (n===1) {
+        return "Rock";
+    } else if(n===2) {
+        return "Paper";
+    } return "Scissor";
+}
+
+console.log("1 for rock,  2 for paper and 3 for scissor");
+let user = parseInt(prompt("Enter your choice: "));
+console.log("You have choosen ", choice(user));
+console.log("Computer has choosen : ", choice(random));
+if (user===1 && random===1 || user===2 && random===2 ||user===3 && random===3 ) {
+    console.log("Draw");
+} else if (user===1 && random===2 || user===2 && random===3 || user===3 && random===1) {
+    console.log("You lost");
+} else {
+    console.log("You win");
+}
